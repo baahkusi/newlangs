@@ -3,5 +3,4 @@ I use this approach [] to quickly learn new languages and get started on an urge
 # Languages
 Each folder is for a language I used this approach on;
 
-- Rust
-- Go
+- [Rust](rust/README.md)
