@@ -1,0 +1,5 @@
+{
+    "rust-analyzer.linkedProjects": [
+    "./rust/starscii/Cargo.toml"
+    ]
+}
