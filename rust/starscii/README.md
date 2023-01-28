@@ -31,3 +31,7 @@ For example input `c C` to get something like this
     println!("{}", starscii.draw("c"));
 }
 ```
+
+```bash
+cargo run -- "rustc" "#" 9
+```

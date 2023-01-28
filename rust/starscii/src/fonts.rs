@@ -16,19 +16,19 @@ pub trait FontFamily {
         let mut stars = String::from("");
         self.process_config(conf);
         for row in 0..conf.font_rows {
-            stars.push_str(&self.draw_row(&conf, &w, &row));
+            stars.push_str(&self.draw_row(&conf, &w, row));
         }
         stars
     }
-    fn draw_row(&self, conf: &FontConfig, w: &str, i: &u8) -> String {
+    fn draw_row(&self, conf: &FontConfig, w: &str, i: u8) -> String {
         let mut row = String::from("");
         for c in w.chars() {
-            row.push_str(&self.draw_char_row(&c, &conf, &i));
+            row.push_str(&self.draw_char_row(&c, &conf, i));
         }
         row.push_str("\n");
         row
     }
-    fn draw_char_row(&self, c: &char, conf: &FontConfig, i: &u8) -> String {
+    fn draw_char_row(&self, c: &char, conf: &FontConfig, i: u8) -> String {
         match c {
             'a' => self.a(conf, i),
             'b' => self.b(conf, i),
@@ -86,160 +86,160 @@ pub trait FontFamily {
             _ => String::from(""),
         }
     }
-    fn a(&self, conf: &FontConfig, i: &u8) -> String {
+    fn a(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn b(&self, conf: &FontConfig, i: &u8) -> String {
+    fn b(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn c(&self, conf: &FontConfig, i: &u8) -> String {
+    fn c(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn d(&self, conf: &FontConfig, i: &u8) -> String {
+    fn d(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn e(&self, conf: &FontConfig, i: &u8) -> String {
+    fn e(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn f(&self, conf: &FontConfig, i: &u8) -> String {
+    fn f(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn g(&self, conf: &FontConfig, i: &u8) -> String {
+    fn g(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn h(&self, conf: &FontConfig, i: &u8) -> String {
+    fn h(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn i(&self, conf: &FontConfig, i: &u8) -> String {
+    fn i(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn j(&self, conf: &FontConfig, i: &u8) -> String {
+    fn j(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn k(&self, conf: &FontConfig, i: &u8) -> String {
+    fn k(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn l(&self, conf: &FontConfig, i: &u8) -> String {
+    fn l(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn m(&self, conf: &FontConfig, i: &u8) -> String {
+    fn m(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn n(&self, conf: &FontConfig, i: &u8) -> String {
+    fn n(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn o(&self, conf: &FontConfig, i: &u8) -> String {
+    fn o(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn p(&self, conf: &FontConfig, i: &u8) -> String {
+    fn p(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn q(&self, conf: &FontConfig, i: &u8) -> String {
+    fn q(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn r(&self, conf: &FontConfig, i: &u8) -> String {
+    fn r(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn s(&self, conf: &FontConfig, i: &u8) -> String {
+    fn s(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn t(&self, conf: &FontConfig, i: &u8) -> String {
+    fn t(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn u(&self, conf: &FontConfig, i: &u8) -> String {
+    fn u(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn v(&self, conf: &FontConfig, i: &u8) -> String {
+    fn v(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn w(&self, conf: &FontConfig, i: &u8) -> String {
+    fn w(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn x(&self, conf: &FontConfig, i: &u8) -> String {
+    fn x(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn y(&self, conf: &FontConfig, i: &u8) -> String {
+    fn y(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn z(&self, conf: &FontConfig, i: &u8) -> String {
+    fn z(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn a_(&self, conf: &FontConfig, i: &u8) -> String {
+    fn a_(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn b_(&self, conf: &FontConfig, i: &u8) -> String {
+    fn b_(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn c_(&self, conf: &FontConfig, i: &u8) -> String {
+    fn c_(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn d_(&self, conf: &FontConfig, i: &u8) -> String {
+    fn d_(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn e_(&self, conf: &FontConfig, i: &u8) -> String {
+    fn e_(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn f_(&self, conf: &FontConfig, i: &u8) -> String {
+    fn f_(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn g_(&self, conf: &FontConfig, i: &u8) -> String {
+    fn g_(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn h_(&self, conf: &FontConfig, i: &u8) -> String {
+    fn h_(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn i_(&self, conf: &FontConfig, i: &u8) -> String {
+    fn i_(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn j_(&self, conf: &FontConfig, i: &u8) -> String {
+    fn j_(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn k_(&self, conf: &FontConfig, i: &u8) -> String {
+    fn k_(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn l_(&self, conf: &FontConfig, i: &u8) -> String {
+    fn l_(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn m_(&self, conf: &FontConfig, i: &u8) -> String {
+    fn m_(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn n_(&self, conf: &FontConfig, i: &u8) -> String {
+    fn n_(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn o_(&self, conf: &FontConfig, i: &u8) -> String {
+    fn o_(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn p_(&self, conf: &FontConfig, i: &u8) -> String {
+    fn p_(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn q_(&self, conf: &FontConfig, i: &u8) -> String {
+    fn q_(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn r_(&self, conf: &FontConfig, i: &u8) -> String {
+    fn r_(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn s_(&self, conf: &FontConfig, i: &u8) -> String {
+    fn s_(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn t_(&self, conf: &FontConfig, i: &u8) -> String {
+    fn t_(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn u_(&self, conf: &FontConfig, i: &u8) -> String {
+    fn u_(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn v_(&self, conf: &FontConfig, i: &u8) -> String {
+    fn v_(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn w_(&self, conf: &FontConfig, i: &u8) -> String {
+    fn w_(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn x_(&self, conf: &FontConfig, i: &u8) -> String {
+    fn x_(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn y_(&self, conf: &FontConfig, i: &u8) -> String {
+    fn y_(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
-    fn z_(&self, conf: &FontConfig, i: &u8) -> String {
+    fn z_(&self, conf: &FontConfig, i: u8) -> String {
         String::from(conf.filler)
     }
 }

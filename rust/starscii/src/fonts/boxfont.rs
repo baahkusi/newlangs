@@ -2,10 +2,10 @@ use crate::fonts::{FontConfig, FontFamily};
 pub struct BoxFont;
 
 impl FontFamily for BoxFont {
-    fn c(&self, conf: &FontConfig, i: &u8) -> String {
+    fn c(&self, conf: &FontConfig, i: u8) -> String {
         let total_rows = usize::from(conf.font_rows);
         let total_cols = usize::from(conf.font_cols);
-        let current_row = usize::from(*i);
+        let current_row = usize::from(i);
         let righ_space = " ".repeat(2);
         let top_bottom = conf.filler.to_string().repeat(total_cols - 2) + &righ_space;
         let mid_space = " ".repeat(total_cols - 1);
@@ -21,10 +21,10 @@ impl FontFamily for BoxFont {
         }
         c
     }
-    fn c_(&self, conf: &FontConfig, i: &u8) -> String {
+    fn c_(&self, conf: &FontConfig, i: u8) -> String {
         let total_rows = usize::from(conf.font_rows);
         let total_cols = usize::from(conf.font_cols);
-        let current_row = usize::from(*i);
+        let current_row = usize::from(i);
         let top_bottom = conf.filler.to_string().repeat(total_cols);
         let mid_space = " ".repeat(total_cols - 1);
         let mid_str = conf.filler.to_string() + &mid_space;
